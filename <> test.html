@@ -1,0 +1,312 @@
+
+         <!DOCTYPE html>
+         <html lang="en">
+         <head>
+          <meta charset="UTF-8">
+          <meta http-equiv="X-UA-Compatible"content='IE-edge'>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Coffee Shop</title>
+         <link rel="stylesheet"href="style.css">
+         <!--bootstrap link-->
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+         <!--bootstrap link-->
+          <!--font link-->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Miniver&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+          <!--font link-->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+         <!--this is icons link-->
+        </head>
+         <body>
+             <div class="home-content"></div>
+          <!--navbar start-->        
+          <nav class="navbar navbar-expand-lg"id="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"id="logo"><img src="web coffee/61f7ccde67553f0004c53e6a (2).png" alt="Coffee Logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span><i class="fa-solid fa-bars" style="color:white; font-size:23px;"></i></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                  </li>                 
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#menu">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#product">Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+       </ul>
+       <form class="d-flex" onsubmit="searchSection(event)">
+        <input class="form-control me-2" type="search" placeholder="Search section..." aria-label="Search" id="searchInput">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+         </form>
+         <script>
+          function searchSection(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value.toLowerCase();
+        
+            const sections = {
+              home: '#home',
+              about: '#about',
+              menu: '#menu',
+              product: '#product',
+              products: '#product',
+              gallery: '#gallery',
+              contact: '#contact',
+              "top card": '#top-card',
+              card: '#top-card'
+            };
+        
+            for (let key in sections) {
+              if (query.includes(key)) {
+                const sectionId = sections[key];
+                const element = document.querySelector(sectionId);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                  return;
+                }
+              }
+            }
+        
+            alert("Section not found. Please try: home, about, menu, product, gallery, contact, top card.");
+          }
+        </script>
+              </div>
+            </div>
+          </nav>        
+            <!--navbar end-->
+
+        <!--Home section start-->
+           <section  id="home">
+            <div class="class"> 
+            <h3>Start Your Day Whith a <br> Fresh Coffee </h3>
+             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis labore,
+              ipsum dolor sit amet consectetur.
+             </p>
+              <!-- Shop Now Button -->
+              <a href="#products" id="btn">Shop Now</a>
+
+          <!-- Somewhere below on the page -->
+             <section id="products">
+             <h2></h2>
+        <!-- Products content here -->
+          </section>
+             </div>
+             </section>
+             <!--Home section end-->
+             <section id="about">
+              <div class="container">
+                <div class="heading">About<span>us</span></div>
+                <div class="row align-items-center">  
+                  <div class="col-md-6">
+                    <div class="card"> 
+                      <img src="./aanii2.jpg" alt="About Image">
+                    </div>   
+                  </div>
+                  <div class="col-md-6">
+                    <h3>What Makes Our Coffee Special?</h3>
+                    <p>
+                      Our coffee is brewed with hand-selected beans sourced from the finest farms.  
+                      Each cup is crafted with passion, ensuring a rich, bold flavor that satisfies every sip.  
+                      Whether it's the aroma or the aftertaste, our coffee delivers a truly special experience.
+                    </p>
+                    <p>
+                      <b>Our coffee is crafted with passion,</b> using freshly roasted beans sourced from premium farms.  
+                      Each cup delivers a rich aroma and a bold flavor that awakens your senses.  
+                      We believe in quality, care, and the perfect brew every single time.
+                    </p>
+                    <a href="#top-card" class="btn btn-dark" id="btn">Learn More</a>
+                  </div>
+                </div>   
+              </div>
+             </section>    
+              <!-- About Section End -->
+
+               <!-- Top Card Section Start -->
+                <section id="top-card" class="py-5">
+                <div class="container">
+                  <h2>Top Card Section</h2>
+                  <p>Start your day with the rich aroma of freshly brewed coffee. Every sip brings warmth, comfort, and a perfect beginning.</p>
+                  <div class="row text-center">
+                    <div class="col-md-4">
+                      <div class="card p-3 shadow">
+                        <img src="web coffee/Beans.jpg" class="card-img-top" alt="Coffee 1">
+                        <div class="card-body">
+                          <h5 class="card-title">Fresh Beans</h5>
+                          <p class="card-text">We use only freshly roasted beans for every brew.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card p-3 shadow">
+                        <img src="web coffee/coffee b1.jpg" class="card-img-top" alt="Coffee 2">
+                        <div class="card-body">
+                          <h5 class="card-title">Perfect Blend</h5>
+                          <p class="card-text">Our unique blend brings out the bold and smooth flavor.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card p-3 shadow">
+                        <img src="web coffee/anii3.jpg" class="card-img-top" alt="Coffee 3">
+                        <div class="card-body">
+                          <h5 class="card-title">Rich Aroma</h5>
+                          <p class="card-text">Enjoy a captivating aroma in every cup you sip.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Top Card Section End -->
+
+               <!-- Menu Section Start -->
+                <section id="menu" class="menu-section">
+                <div class="container">
+                  <h2 class="section-title">Menu</h2>
+                  <div class="menu-cards d-flex justify-content-center flex-wrap gap-4">
+                    <div class="card">
+                      <img src="web coffee/blackcoffee.jpg" alt="Coffee 1">
+                      <h3>Espresso</h3>
+                      <p>Strong and bold coffee shot to energize your day.</p>
+                      <span class="price">$3.50</span>
+                    </div>
+                    <div class="card">
+                      <img src="web coffee/cappu coffee.jpg" alt="Coffee 2">
+                      <h3>Cappuccino</h3>
+                      <p>Perfect blend of espresso, milk, and foam.</p>
+                      <span class="price">$4.00</span>
+                    </div>
+                    <div class="card">
+                      <img src="web coffee/latte coffee.jpg" alt="Coffee 3">
+                      <h3>Latte</h3>
+                      <p>Smooth and creamy, loved by all coffee fans.</p>
+                      <span class="price">$4.50</span>
+                      </div>
+                      <div class="card">  
+                      <img src="web coffee/istockphoto-838326538-612x612 (1).jpg" alt="Coffee 4">
+                      <h3>Cortado</h3>
+                      <p>  A cortado is equal parts espresso and warm milk for a smooth taste.</p>
+                      <span class="price">$5.20</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- Menu Section End -->
+             
+
+<!-- Products Section Start -->
+<section id="product" class="product-section">
+  <div class="container">
+<h2 class="section-title">Product</h2>
+<div class="product-cards">
+<div class="card">
+ <img src="web coffee/coffee bean.jpg" alt="Product 1">
+ <h3>Coffee Beans</h3>
+ <p>Premium roasted beans for perfect brewing.</p>
+ <span class="price">$12.00</span>
+</div>
+
+<div class="card">
+ <img src="web coffee/ggg.jpg" alt="Product 2">
+ <h3>French Press</h3>
+ <p>Classic design for rich and bold coffee.</p>
+ <span class="price">$25.00</span>
+</div>
+
+<div class="card">
+ <img src="web coffee/classic.jpg" alt="Product 3">
+ <h3>Classic Coffee</h3>
+ <p> A timeless brew that delivers rich flavor and pure satisfaction in every sip.</p>
+ <span class="price">$8.50</span>
+</div>
+
+<div class="card">
+ <img src="web coffee/in.c.jpg" alt="Product 4">
+ <h3>Instant coffee</h3>
+ <p> Quick to make, bold in taste, and perfect for busy mornings. </p>
+ <span class="price">$15.00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section End --> 
+
+       <!-- Gallery Section Start -->
+<section id="gallery" class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">Our Gallery</h2>
+    <div class="gallery-grid">
+      <img src="web coffee/istockphoto-1492952950-612x612.jpg" alt="Gallery 1">
+      <img src="web coffee/gal.jpg" alt="Gallery 2">
+      <img src="web coffee/istockphoto-2137796983-612x612 (1).jpg" alt="Gallery 3">
+      <img src="web coffee/gallery3.jpg" alt="Gallery 4">
+      <img src="web coffee/coffee gallery 1.jpg" alt="Gallery 5">
+      <img src="web coffee/istockphoto-1806166328-612x612.jpg" alt="Gallery 6">
+      <img src="web coffee/gallery 5.jpg" alt="Gallery 7">
+      <img src="web coffee/istockphoto-2164222706-612x612.jpg" alt="Gallery 8">
+      <img src="web coffee/cake.jpg" alt="Gallery 9">
+      <img src="web coffee/KEARTNZI Custom 3D Retro Coffee Shop Self-Adhesive Wall Paper Cafe Shop Restaurant Drink Wall Murals Removable Large Coffee Wallpaper.jpeg" alt="Gallery 10">
+    </div>
+  </div>
+</section>
+<!-- Gallery Section End -->
+
+    
+      
+        <!-- Contact Section Start -->
+        <section id="contact">   
+          <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+              <div class="contact-form">
+                <form>
+                  <input type="text" placeholder="Your Name" required>
+                  <input type="email" placeholder="Your Email" required>
+                  <input type="tel" placeholder="Your Phone Number" required>
+                  <textarea rows="5" placeholder="Your Message" required></textarea>
+                  <button type="submit">Send Message</button>
+                </form>
+              </div>
+              <div class="contact-info">
+                <h3>Our Location</h3>
+                <p>123 Coffee Street, Lahore, Pakistan</p>
+                <h3>Email</h3>
+                <p>guriag604@gmail.com</p>
+                <h3>Phone</h3>
+                <p>+92 300 1234567</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Section End -->
+      
+              
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script></body>
+        </html>
+                
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <title>Contact Us</title>
+          <link rel="stylesheet" href="style.css">
+        </head>
+        <body>
+      
+
+
+
